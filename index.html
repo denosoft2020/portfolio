@@ -110,15 +110,29 @@
             white-space: nowrap;
             border-right: 2px solid currentColor;
             padding-right: 2px;
-            animation: caretBlink 0.9s steps(1) infinite;
+            animation: 
+                typing-loop 6s steps(30) infinite,
+                blink-cursor 0.9s steps-end infinite,
+                caretBlink 0.9s steps(1) infinite;
         }
 
         .typewriter.done {
             border-right-color: transparent;
-            animation: none;
+            animation: 
+                typing-loop 6s steps(30) infinite,
+                blink-cursor 0.9s steps-end infinite,
+                caretBlink 0.9s steps(1) infinite;
         }
-
+        @keyframes typing-loop {
+            0%, 100% { width: 0; }
+            40%, 60% { width: 13ch; }
+            90% { width: 0; }
+            
+        }
         @keyframes caretBlink {
+            from, to {
+                border-right-color: currentColor;
+            }
             50% {
                 border-right-color: transparent;
             }
@@ -871,6 +885,24 @@
                         <div class="project-links">
                             <a href="https://denosoft2020.github.io/portfolio" class="btn">Live Demo</a>
                             <a href="https://github.com/denosoft2020/portfolio" class="btn btn-outline">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="0e5jW.jpg" alt="security guard platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>Security Guard Portifolio</h3>
+                        <p>This  website to demostrate some skills on how to make my security guard portfolio look professional.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JAVASCRIPT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href=" https://denosoft2020.github.io/LUWAGA-SULAIMAN-YUSUF/" class="btn">Live Pages</a>
+                            <a href="https://github.com/denosoft2020/LUWAGA-SULAIMAN-YUSUF" class="btn btn-outline">Source Code</a>
                         </div>
                     </div>
                 </div>
